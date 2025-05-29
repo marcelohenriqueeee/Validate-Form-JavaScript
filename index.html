@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validação com JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Validação de formulário com JavaScript</h1>
+    <form action="#" id="form">
+      <label for="required">Nome:</label>
+      <input
+        type="text"
+        class="required"
+        placeholder="*"
+        oninput="validateName()"
+      />
+      <span class="span-required">Campo obrigatório</span>
+
+      <label for="required">Email:</label>
+      <input
+        type="email"
+        class="required"
+        placeholder="*"
+        oninput="validateEmail()"
+      />
+      <span class="span-required">Insira um email válido</span>
+
+      <label for="required">Password:</label>
+      <input
+        type="password"
+        class="required"
+        placeholder="*"
+        oninput="validatePassword()"
+      />
+      <span class="span-required">Sua senha deve ter no mínimo 8 digitos</span>
+
+      <label for="required">Situação de trabalho:</label>
+      <select class="required" oninput="validateJob()">
+        <option value="">Está buscando emprego?</option>
+        <option value="yes">Sim</option>
+        <option value="no">Não</option>
+      </select>
+      <span class="span-required">Campo obrigatório</span>
+
+      <label for="required">Mensagem:</label>
+      <textarea
+        name="mensage"
+        class="required"
+        placeholder="*"
+        oninput="validateMensage()"
+      ></textarea>
+      <span class="span-required">Campo obrigatório</span>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
